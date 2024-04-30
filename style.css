@@ -7,7 +7,15 @@
 
 
 body { 
+    background: url(greek-158920.svg);
     background-color: var(--dark_green);
+    width: 600vw;
+    margin: -10px;
+    padding: -10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-repeat: repeat-x;
+   
 }
 
 /* Styling for the navbar */
@@ -42,7 +50,22 @@ body {
 }
 
 .nav-item {
+    position: relative;
+    display: inline-block;
     padding: 10px;
+}
+
+.nav-text {
+    position: relative;
+}
+
+.nav-shadow{
+    color: rgba(0, 0, 0, 0);
+    transform: skewX(-30deg) scaleY(.8);
+    /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.7); */
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }
 
 /* Styling for the landing */
