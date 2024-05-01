@@ -1,0 +1,22 @@
+/* Color pallete */
+:root{
+    --green: rgb(24, 69, 59);
+    --kelly_green: rgb(0, 138, 8);
+    --dark_green: rgb(10, 29, 25);
+}
+
+/* Styling for the about section */
+#about-section {
+    display: flex;
+    color: white;
+    height: 80vh;
+}
+
+#about-content {
+    font-size: 16pt;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 5px;
+    line-height: 30px;
+    width: 400px;
+}

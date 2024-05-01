@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conner Smith</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -60,12 +66,52 @@
         </section>
         <section class="section-container" id="about-section">
             <div class="section-title">About</div>
+            <div class="section-content" id="about-content">
+                I am a senior at Michigan State University, expected to 
+                graduate in December with a degree in Computer Science. 
+                Throughout my academic journey, I've cultivated a strong
+                foundation in software development, specializing in dynamic 
+                web applications and object-oriented software.
+                <br><br>
+                While pursuing my degree, I've had the opportunity to work
+                on a variety of projects that have allowed me to apply my 
+                knowledge in practical settings. From building interactive 
+                web applications to designing and implementing software for 
+                research projects, I've gained hands-on experience in 
+                tackling real-world challenges.
+            </div>
         </section>
         <section class="section-container" id="projects-section">
             <div class="section-title">Projects</div>
+            <div class="project-container" id="trello-clone-project-container">
+                <a href="https://final-exam-bpeomogtea-uc.a.run.app/">
+                    <div class="project-title">Trello Clone</div>
+                </a>
+                <div class="project-description">
+                    A clone of the popular list making application, Trello.
+                    Utilizes Flask, MySQL, user-authentication, and Web 
+                    Sockets to allow for live updates and chats between users. 
+                </div>
+                <img src="images/trello-clone.png" alt="Image of my trello clone application" id="trello-clone-image">
+            </div>
         </section>
         <section class="section-container" id="contact-section">
             <div class="section-title">Contact</div>
+            <form class="contact-form" action="#" method="post">
+                <div class="contact-form-field">
+                    <label class="form-label" for="name">Name/Company</label>
+                    <input type="text" class="form-input" required="" placeholder="Enter Your Name/Company" id="name">
+                </div>
+                <div class="contact-form-field">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-input" required="" placeholder="Enter Your Email" id="email">
+                </div>
+                <div class="contact-form-field">
+                    <label class="form-label" for="name">Message</label>
+                    <textarea name="message" class="form-input" required="" id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                </div>
+                <button class="contact-button" type="submit">Submit</button>
+            </form>
         </section>
     </article>
 

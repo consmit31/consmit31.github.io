@@ -1,0 +1,38 @@
+/* Color pallete */
+:root{
+    --green: rgb(24, 69, 59);
+    --kelly_green: rgb(0, 138, 8);
+    --dark_green: rgb(10, 29, 25);
+}
+
+/* Styling for background */
+body { 
+    background-image: url(../images/greek-158920.png);
+    background-color: var(--dark_green);
+    background-position-y: center;
+    background-repeat: repeat-x;
+    background-size: auto 75%;
+    width: 350vw;
+    height: 100vh;
+    min-height: 750px;
+    max-height: 750px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/* Styling for article */
+article{
+    display: inline-flex;
+    margin-top: 125px;
+}
+
+/* Stying for section class */
+.section-container {
+    display: block;
+    margin: 25px;
+}
+
+.section-title {
+    font-size: xxx-large;
+    margin: 50px;
+} 

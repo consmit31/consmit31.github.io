@@ -1,0 +1,87 @@
+/* Color pallete */
+:root{
+    --green: rgb(24, 69, 59);
+    --kelly_green: rgb(0, 138, 8);
+    --dark_green: rgb(10, 29, 25);
+}
+
+/* Styling for the home section */
+#home-section {
+    display: flex;
+    color: white;
+    height: 80vh;
+}
+
+#home-content {
+    font-size: 18pt;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 5px;
+    padding-top: 20px;
+    line-height: 35px;
+    width: 400px;
+}
+
+/* Styling for the link buttons */
+.link-buttons {
+    margin-left: 100px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--green);
+    justify-content: space-between;
+    width: 75px;
+    height: 80vh;
+    min-height: 550px;
+    border-radius: 3px;
+    border-bottom: 2px solid var(--dark_green);
+    border-right: 2px solid var(--dark_green);
+    border-top: 2px solid  rgb(31, 92, 79);
+    border-left: 2px solid rgb(31, 92, 79);
+}
+
+.link-buttons a {
+    display: block;
+    margin: auto;
+}
+
+#linkedin-image {
+    width: 60px;
+    filter: invert(1);
+}
+
+#linkedin-image:hover {
+    filter: invert(0);
+    transition: filter .4s;
+}
+
+#github-image {
+    display: block;
+    margin: auto;
+    width: 62px;
+}
+
+#github-image:hover {
+    filter: invert(1);
+    transition: filter .4s;
+}
+
+#projects-button {
+    font-size: 10pt;
+    background-color: white;
+    color: black;
+    width: 60px;
+    height: 45px;
+    border-radius:20px;
+    border: 2px solid var(--dark_green);
+    margin-top: 20px;
+    display: block; 
+    margin: auto; 
+}
+
+#projects-button:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 0.4s, color 0.4s;
+}
