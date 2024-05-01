@@ -5,20 +5,29 @@
     --dark_green: rgb(10, 29, 25);
 }
 
-
+/* Styling for background */
 body { 
-    background: url(greek-158920.svg);
+    background-image: url(images/greek-158920.png) ;
     background-color: var(--dark_green);
+    background-position-y: center;
+    background-repeat: repeat-x;
+    background-size: auto 75%;
     width: 600vw;
-    margin: -10px;
-    padding: -10px;
+    height: 100vh;
+    min-height: 750px;
+    max-height: 750px;
     overflow-x: scroll;
     overflow-y: hidden;
-    background-repeat: repeat-x;
-   
 }
 
 /* Styling for the navbar */
+header {
+    width: 100vw;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
 .title {
     display: flex;
     align-items: center;
@@ -62,16 +71,118 @@ body {
 .nav-shadow{
     color: rgba(0, 0, 0, 0);
     transform: skewX(-30deg) scaleY(.8);
-    /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.7); */
     position: absolute;
     top: 30px;
     left: 30px;
 }
 
-/* Styling for the landing */
+/* Styling for article */
+article{
+    display: inline-flex;
+    margin-top: 125px;
+}
+
+/* Stying for section class */
+.section-container {
+    display: block;
+    margin: 25px;
+}
+
+.section-title {
+    font-size: xxx-large;
+} 
+
+/* Styling for the home section */
+#home-section {
+    color: white;
+    height: 100vh;
+    width: 400px;
+}
+
+#home-content {
+    font-size: 18pt;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 5px;
+    line-height: 30px;
+}
+
+/* Styling for the link buttons */
+.link-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--green);
+    justify-content: space-between;
+    width: 75px;
+    height: 75vh;
+    border-radius: 3px;
+    border-bottom: 2px solid var(--dark_green);
+    border-right: 2px solid var(--dark_green);
+    border-top: 2px solid  rgb(31, 92, 79);
+    border-left: 2px solid rgb(31, 92, 79);
+}
+
+#linkedin-image {
+    display: block;
+    margin: auto;
+    width: 60px;
+    filter: invert(1);
+}
+
+#linkedin-image:hover {
+    filter: invert(0);
+    transition: filter .4s;
+}
+
+#github-image {
+    display: block;
+    margin: auto;
+    width: 62px;
+}
+
+#github-image:hover {
+    filter: invert(1);
+    transition: filter .4s;
+}
+
+#projects-button {
+    font-size: 10pt;
+    background-color: white;
+    color: black;
+    width: 60px;
+    height: 45px;
+    border-radius:20px;
+    border-bottom: 2px solid var(--dark_green);
+    border-right: 2px solid var(--dark_green);
+    border-top: 2px solid var(--green);
+    border-left: 2px solid var(--green);
+    margin-top: 20px;
+    display: block; 
+    margin: auto; 
+}
+
+#projects-button:hover {
+    background-color: black;
+    color: white;
+
+    transition: background-color 0.4s, color 0.4s;
+}
 
 /* Styling for the about section */
+#about-section {
+    background-color: white;
+    height: 100vh;
+}
 
 /* Styling for the projects section */
+#projects-section {
+    background-color: white;
+    height: 100vh;
+}
 
 /* Styling for the contact section */
+#contact-section {
+    background-color: white;
+    height: 100vh;
+}
