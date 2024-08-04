@@ -18,33 +18,23 @@
     <header>
         <nav class="nav-bar" id="nav-bar">
             <div class="title">
-                <img src="" class="headshot">
+                <img src="./images/gruff.jpg" class="headshot">
                 <div class="shadow-behind"></div>
                 <h3 class="name" data-text="Conner Smith">Conner Smith</h1>    
             </div>
 
             <ul class="nav-items">
-                <li class="nav-item">
+                <li class="nav-item" onclick="scrollToHome()">
                     <div class="nav-text">Home</div>
-                    <div class="nav-shadow">Home</div>
                 </li>
-                <li class="nav-item">
-                    <div>
-                        <div class="nav-text">About</div>
-                        <div class="nav-shadow">About</div>
-                    </div>
+                <li class="nav-item" onclick="scrollToAbout()">
+                    <div class="nav-text">About</div>
                 </li>
-                <li class="nav-item">
-                    <div>
-                        <div class="nav-text">Projects</div>
-                        <div class="nav-shadow">Projects</div>
-                    </div>
+                <li class="nav-item" onclick="scrollToProjects()">
+                    <div class="nav-text">Projects</div>
                 </li>
-                <li class="nav-item">
-                    <div>
-                        <div class="nav-text">Contact</div>
-                        <div class="nav-shadow">Contact</div>
-                    </div>
+                <li class="nav-item" onclick="scrollToContact()">
+                    <div class="nav-text">Contact</div>
                 </li>
             </ul>
         </nav>
@@ -63,7 +53,7 @@
         <section class="link-buttons" id="link-buttons">
             <a href="https://www.linkedin.com/in/conner-smith-912186288"><img src="images/linkedin.png" alt="Linked-in" id="linkedin-image"></a>
             <a href="https://github.com/consmit31"><img src="images/github-mark-white.png" alt="" id="github-image"></a>
-            <button id="projects-button" name="projects-button" onclick="">Projects</button>
+            <button id="projects-button" name="projects-button" onclick="scrollToProjects()">Projects</button>
         </section>
         <section class="section-container" id="about-section">
             <div class="section-title">About</div>
@@ -115,6 +105,5 @@
             </form>
         </section>
     </article>
-
 </body>
 </html>
