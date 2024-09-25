@@ -7,6 +7,8 @@
 
 /* Styling for the home section */
 #home-section {
+    mask-image:none;
+    -webkit-mask-image: none;
     display: flex;
     color: white;
     height: 80vh;
@@ -24,16 +26,13 @@
 
 /* Styling for the link buttons */
 .link-buttons {
-    margin-left: 100px;
-    margin-right: 50px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     background-color: var(--green);
-    justify-content: space-between;
-    width: 75px;
-    height: 80vh;
-    min-height: 550px;
+    width: 80vw;
+    min-height: 75px;
     border-radius: 3px;
     border-bottom: 2px solid var(--dark_green);
     border-right: 2px solid var(--dark_green);
@@ -85,3 +84,44 @@
     color: white;
     transition: background-color 0.4s, color 0.4s;
 }
+
+/* @media (max-width: 260px) {
+
+    #home-section {
+        display:flex;
+        color: white;
+        height: 80vh;
+    }
+    
+    #home-content {
+        font-size: 18pt;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 5px;
+        padding-top: 20px;
+        line-height: 35px;
+        width: 400px;
+    }
+
+    .link-buttons {
+        margin-bottom: 50px;
+        display:inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--green);
+        height: 75px;
+        width: 300vw;
+        max-height: 100px;
+        border-radius: 3px;
+        border-bottom: 2px solid var(--dark_green);
+        border-right: 2px solid var(--dark_green);
+        border-top: 2px solid  rgb(31, 92, 79);
+        border-left: 2px solid rgb(31, 92, 79);
+    }    
+
+    .link-buttons a {
+        display: inline;
+        margin: auto;
+    }
+
+} */

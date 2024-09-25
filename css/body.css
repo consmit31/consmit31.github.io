@@ -10,19 +10,17 @@ body {
     background-image: url(../images/greek-158920.png);
     background-color: var(--dark_green);
     background-position-y: center;
-    background-repeat: repeat-x;
-    background-size: auto 75%;
-    width: 350vw;
+    background-repeat: repeat-y;
+    background-size: auto 100%;
+    width: 100vw;
     height: 100vh;
     min-height: 750px;
     max-height: 750px;
-    overflow-x: scroll;
-    overflow-y: hidden;
 }
 
 /* Styling for article */
 article{
-    display: inline-flex;
+    display: block;
     margin-top: 125px;
 }
 
@@ -30,9 +28,49 @@ article{
 .section-container {
     display: block;
     margin: 25px;
+    scroll-snap-align: start;
 }
 
 .section-title {
     font-size: xxx-large;
     margin: 50px;
 } 
+
+/*##########################################*/
+/* Styling for mobile devices*/
+/* @media (max-width: 260px) {
+    body { 
+        background-image: url(../images/greek-158920.png);
+        background-color: var(--kelly_green);
+        background-position-y: center;
+        background-repeat: repeat-x;
+        background-size: auto 75%;
+        width: 350vw;
+        height: 100vh;
+        min-height: 750px;
+        max-height: 750px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    } */
+
+
+    /* Styling for article */
+
+    /* article {
+        display: block;
+        margin-top: 125px;
+        
+    } */
+
+    /* Stying for section class */
+    /* .section-container {
+        display: block;
+        margin: 25px;
+    }
+
+    .section-title {
+        font-size: xxx-large;
+        margin: 50px;
+    }  */
+
+/* } */

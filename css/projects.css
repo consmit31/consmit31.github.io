@@ -22,7 +22,7 @@
     color: white;
     height: 80vh;
     width: fit-content;
-    padding-top: 50px;
+    /* /* padding-top: 50px; */
     padding-left: 50px;
 }
 
@@ -45,4 +45,3 @@
     margin: 10px;
 }
 
-/* Styling for the contact section */
