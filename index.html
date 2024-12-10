@@ -1,101 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conner Smith</title>
-
-    <link rel="stylesheet" href="css/body.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="./images/gruff.jpg" type="image/png">
     
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
     <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+
 </head>
+
 <body>
     <header>
-        <nav class="nav-bar" id="nav-bar">
-            <div class="title">
-                <img src="./images/gruff.jpg" class="headshot">
-                <div class="shadow-behind"></div>
-                <h3 class="name" data-text="Conner Smith">Conner Smith</h1>    
-            </div>
-
-            <ul class="nav-items">
-                <li class="nav-item" onclick="scrollToHome()">
-                    <div class="nav-text">Home</div>
-                </li>
-                <li class="nav-item" onclick="scrollToAbout()">
-                    <div class="nav-text">About</div>
-                </li>
-                <li class="nav-item" onclick="scrollToProjects()">
-                    <div class="nav-text">Projects</div>
-                </li>
-                <li class="nav-item" onclick="scrollToContact()">
-                    <div class="nav-text">Contact</div>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light " id="nav-bar">
+            <div class="d-flex justify-content-between align-items-center w-100"></div>
+                <div class="navbar-brand d-flex align-items-center">
+                    <img src="./images/gruff.jpg" class="headshot rounded-circle mr-2">
+                    <h3 class="name mb-0" data-text="Conner Smith">Conner Smith</h3>
+                </div>
+                <div class="nav d-block d-sm-flex" id="navbarNav">
+                    <li class="nav-item d-flex align-items-center" style="padding: 0.5rem 1rem;">
+                        <a href="https://www.linkedin.com/in/conner-smith-912186288">
+                            <img src="images/linkedin.png" alt="Linked-in" id="linkedin-image">
+                        </a>
+                    </li>
+                    <li class="nav-item d-sm-flex align-items-center" style="padding: 0.5rem 1rem;">
+                        <a href="https://github.com/consmit31">
+                            <img src="images/github-mark-white.png" id="github-image" alt="GitHub">
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-sm-flex" onclick="scrollToHome()">
+                        <a class="nav-link text-dark fs-3" href="#" style="font-size: 1.25rem;">Home</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-flex" onclick="scrollToAbout()">
+                        <a class="nav-link text-dark" href="#" style="font-size: 1.25rem;">About</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-flex" onclick="scrollToProjects()">
+                        <a class="nav-link text-dark" href="#" style="font-size: 1.25rem;">Projects</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-flex" onclick="scrollToContact()">
+                        <a class="nav-link text-dark" href="#" style="font-size: 1.25rem;">Contact</a>
+                    </li>
+                </div>
         </nav>
-        <hr>
     </header>
 
-    <article id="article">
-        <section class="link-buttons" id="link-buttons">
-            <a href="https://www.linkedin.com/in/conner-smith-912186288"><img src="images/linkedin.png" alt="Linked-in" id="linkedin-image"></a>
-            <a href="https://github.com/consmit31"><img src="images/github-mark-white.png" alt="" id="github-image"></a>
-            <button id="projects-button" name="projects-button" onclick="scrollToProjects()">Projects</button>
-        </section>
-        <section class="section-container" id="about-section">
-            <div class="section-title">Welcome</div>
-            <div class="section-content" id="about-content">
-                I am a senior at Michigan State University, expected to 
-                graduate in December with a degree in Computer Science. 
-                Throughout my academic journey, I've cultivated a strong
-                foundation in software development, front-end web development and
-                data analysis. 
+    <article id="article" class="container">
+        <section class="section-container my-5" id="about-section">
+            <div class="section-title h2 text-center text-light">Welcome</div>
+            <div class="section-content text-light" id="about-content">
+                I am a Michigan State University alumnus with a bachelor's
+                degree in Computer Science. During my tenure as a student, I built
+                a solid foundation in solving everyday problems by developing
+                mobile, web, and desktop applications.
                 <br><br>
-                While pursuing my degree, I've had the opportunity to work
-                on a variety of projects that have allowed me to apply my 
-                knowledge in practical settings. From building interactive 
-                web applications to designing and implementing software for 
-                research projects, I've gained hands-on experience in 
-                solving real-world problems.
+                This page displays some of the most important projects I have 
+                worked on both as a student and as a professional. I am continuously
+                learning and imrproving my skills as a developer. Below you will find
+                links to some of my projects, my contact information, and my resume.
             </div>
         </section>
-        <section class="section-container" id="projects-section">
-            <div class="section-title">Projects</div>
-            <div class="project-container" id="trello-clone-project-container">
-                <a href="https://final-exam-bpeomogtea-uc.a.run.app/">
-                    <div class="project-title">Trello Clone</div>
+
+        <section class="section-container my-5" id="projects-section">
+            <div class="section-title h2 text-centerA text-light">Projects</div>
+
+            <div class="project-container card bg-dark my-3" id="trello-clone-project-container">
+                <a href="https://final-exam-bpeomogtea-uc.a.run.app/" class="card-header">
+                    <div class="project-title h4 ">Trello Clone</div>
                 </a>
-                <div class="project-description">
-                    A clone of the popular list making application, Trello.
-                    Utilizes Flask, MySQL, user-authentication, and Web 
-                    Sockets to allow for live updates and chats between users. 
+                <div class="card-body">
+                    <div class="text-light">
+                        A clone of the popular list-making application, Trello.
+                        Utilizes Flask, MySQL, a user-authentication system, and Web
+                        Sockets to allow for live updates and chats between users.
+                    </div>
+                    <div class="d-flex justify-content-center ">
+                        <img src="images/trello-clone.png" alt="Image of my trello clone application" class="img-fluid mt-3">
+                    </div>
+                        
                 </div>
-                <img src="images/trello-clone.png" alt="Image of my trello clone application" id="trello-clone-image">
+            </div>
+
+            <div class="project-container card bg-dark my-3" id="cooking-GP-project-container">
+                <a href="http://www.capstone.cse.msu.edu/2024-08/projects/whirlpool/" class="card-header">
+                    <div class="project-title h4">Whirlpool - Cooking GPS</div>
+                </a>
+                <div class="card-body">
+                    <div class="text-light">
+                        In collaboration with Whirlpool, my team and I developed a mobile
+                        application that guides users through the cooking process.
+                        The app leverages a Job-shop style algorithm to calculate the
+                        optimal order of steps for a recipe, and provides users with a list
+                        of all of the steps in order so that each recipe comes out warm
+                        simultaneously. The app uses Flutter for the front-end and Python
+                        for the back end and Websockets for real-time updates on a user's
+                        Whirlpool appliance screen.
+                    </div>
+                    <div class="d-flex justify-content-center" style="height: 400px;">
+                        <img src="./images/gps1.png" class="img-fluid mt-3" alt="Screenshots of the Cooking GPS">
+                        <img src="./images/gps2.png" class="img-fluid mt-3" alt="Screenshots of the Cooking GPS">
+                        <img src="./images/gps3.png" class="img-fluid mt-3" alt="Screenshots of the Cooking GPS">
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="section-container" id="contact-section">
-            <div class="section-title">Contact</div>
-            <form class="contact-form" action="#" method="post">
-                <div class="contact-form-field">
-                    <label class="form-label" for="name">Name/Company</label>
-                    <input type="text" class="form-input" required="" placeholder="Enter Your Name/Company" id="name">
-                </div>
-                <div class="contact-form-field">
-                    <label class="form-label" for="email">Email</label>
-                    <input type="email" class="form-input" required="" placeholder="Enter Your Email" id="email">
-                </div>
-                <div class="contact-form-field">
-                    <label class="form-label" for="name">Message</label>
-                    <textarea name="message" class="form-input" required="" id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
-                </div>
-                <button class="contact-button" type="submit">Submit</button>
-            </form>
+
+        <section class="section-container my-5" id="contact-section">
+            <div class="section-title h2 text-center text-light">Contact</div>
+            <div class="section-content text-light">
+                <form action="https://formspree.io/f/xovqzknp" method="post">
+                    <div class="form-group">
+                        <label for="sender">Name/Business:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
         </section>
+        
+
     </article>
 </body>
+
 </html>
