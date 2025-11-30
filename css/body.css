@@ -1,20 +1,237 @@
-/* Color pallete */
-:root{
+/* Color palette */
+:root {
     --green: rgb(24, 69, 59);
     --kelly_green: rgb(0, 138, 8);
     --dark_green: rgb(10, 29, 25);
+    --light_green: rgba(24, 69, 59, 0.1);
+    --mint_green: #40e0d0;
+    --text_light: #f8f9fa;
+    --text_muted: rgba(248, 249, 250, 0.8);
+    --shadow_dark: rgba(0, 0, 0, 0.3);
+    --border_radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Global styles */
+* {
+    box-sizing: border-box;
 }
 
 /* Styling for background */
 body { 
     background-image: url(../images/greek-158920.png);
     background-color: var(--dark_green);
-    background-position-y: center;
-    background-repeat: repeat-y;
-    background-size: auto 100%;
-    width: 100vw;
-    height: 100vh;
-    min-height: 750px;
-    max-height: 750px;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text_light);
+    overflow-x: hidden;
+}
+
+/* Container improvements */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section styling */
+.section-container {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border_radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 8px 32px var(--shadow_dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.section-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px var(--shadow_dark);
+}
+
+/* Typography */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--kelly_green), var(--mint_green));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.section-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text_muted);
+}
+
+/* Project containers */
+.project-container {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid var(--green) !important;
+    border-radius: var(--border_radius);
+    overflow: hidden;
+    transition: var(--transition);
+    margin: 1.5rem 0;
+}
+
+.project-container:hover {
+    transform: translateY(-3px);
+    border-color: var(--kelly_green) !important;
+    box-shadow: 0 10px 30px rgba(0, 138, 8, 0.3);
+}
+
+.project-container .card-header {
+    background: linear-gradient(135deg, var(--green), var(--kelly_green)) !important;
+    border: none;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.project-container .card-header:hover {
+    background: linear-gradient(135deg, var(--kelly_green), var(--mint_green)) !important;
+    text-decoration: none;
+}
+
+.project-title {
+    color: white !important;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Image styling */
+.img-fluid {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    max-width: 100%;
+    height: auto;
+}
+
+.img-fluid:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text_light);
+    display: block;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: var(--text_light);
+    padding: 12px 16px;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--kelly_green);
+    box-shadow: 0 0 0 0.2rem rgba(0, 138, 8, 0.25);
+    color: var(--text_light);
+}
+
+.form-control::placeholder {
+    color: rgba(248, 249, 250, 0.6);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--kelly_green), var(--green));
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 138, 8, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--mint_green), var(--kelly_green));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 138, 8, 0.4);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-container {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-content {
+        font-size: 1rem;
+    }
+    
+    .project-container .card-header {
+        padding: 0.8rem 1rem;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    body {
+        background-attachment: scroll;
+        background-size: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-container {
+        padding: 1rem;
+    }
+    
+    .project-container .card-header {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .card-body {
+        padding: 0.8rem;
+    }
 }
 

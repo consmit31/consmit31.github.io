@@ -11,6 +11,7 @@
     
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <script src="script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
@@ -21,36 +22,41 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light w-100" id="nav-bar">
-            <div class="d-flex justify-content-between align-items-center w-100">
-                <div class="navbar-brand d-flex align-items-center">
+        <nav class="navbar navbar-expand-lg navbar-dark w-100" id="nav-bar">
+            <div class="container-fluid">
+                <div class="navbar-brand d-flex flex-row align-items-center">
                     <img src="./images/gruff.jpg" class="headshot rounded-circle mr-2">
                     <h3 class="name mb-0" data-text="Conner Smith">Conner Smith</h3>
                 </div>
-                <div class="nav d-block d-sm-flex" id="navbarNav">
-                    <li class="nav-item d-flex align-items-center" style="padding: 0.5rem 1rem;">
-                        <a href="https://www.linkedin.com/in/conner-smith-912186288">
-                            <img src="images/linkedin.png" alt="Linked-in" id="linkedin-image">
-                        </a>
-                    </li>
-                    <li class="nav-item d-sm-flex align-items-center" style="padding: 0.5rem 1rem;">
-                        <a href="https://github.com/consmit31">
-                            <img src="images/github-mark-white.png" id="github-image" alt="GitHub">
-                        </a>
-                    </li>
-                    <li class="nav-item d-none d-sm-flex" onclick="scrollToHome()">
-                        <a class="nav-link text-dark fs-3" href="#" style="font-size: 1.25rem;">Home</a>
-                    </li>
-                    <li class="nav-item d-none d-sm-flex" onclick="scrollToAbout()">
-                        <a class="nav-link text-dark" href="#" style="font-size: 1.25rem;">About</a>
-                    </li>
-                    <li class="nav-item d-none d-sm-flex" onclick="scrollToProjects()">
-                        <a class="nav-link text-dark" href="#" style="font-size: 1.25rem;">Projects</a>
-                    </li>
-                    <li class="nav-item d-none d-sm-flex" onclick="scrollToContact()">
-                        <a class="nav-link text-dark" href="#" style="font-size: 1.25rem;">Contact</a>
-                    </li>
+                
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto d-flex align-items-center">
+                        <li class="nav-item d-flex align-items-center">
+                            <a href="https://www.linkedin.com/in/conner-smith-912186288" target="_blank" rel="noopener noreferrer">
+                                <img src="images/linkedin.png" alt="LinkedIn" id="linkedin-image">
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <a href="https://github.com/consmit31" target="_blank" rel="noopener noreferrer">
+                                <img src="images/github-mark-white.png" id="github-image" alt="GitHub">
+                            </a>
+                        </li>
+                        <li class="nav-item" onclick="scrollToAbout()">
+                            <a class="nav-link" href="#about-section">About</a>
+                        </li>
+                        <li class="nav-item" onclick="scrollToProjects()">
+                            <a class="nav-link" href="#projects-section">Projects</a>
+                        </li>
+                        <li class="nav-item" onclick="scrollToContact()">
+                            <a class="nav-link" href="#contact-section">Contact</a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
         </nav>
     </header>
 
@@ -77,7 +83,7 @@
         </section>
 
         <section class="section-container my-5" id="projects-section">
-            <div class="section-title h2 text-centerA text-light">Projects</div>   
+            <div class="section-title h2 text-center text-light">Projects</div>   
             
             <div class="project-container card bg-dark my-3" id="katrina-project-container">
                 <a href="https://katrina-md73.onrender.com/" class="card-header">
@@ -97,8 +103,8 @@
                         parsing, and intuitive navigation. It's a secure, efficient, and 
                         offline-capable way to make repetitive tasks faster and more consistent.
                     </div>
-                    <div class="d-flex justify-content-center flex" style="width: fit-content">
-                        <img src="./images/katrina.png" class="img-fluid" alt="Screenshots of KATRINA"">
+                    <div class="d-flex justify-content-center" style="width: 100%;">
+                        <img src="./images/katrina.png" class="img-fluid" alt="Screenshots of KATRINA" style="max-width: 100%;">
                     </div>
                 </div>
             </div>
@@ -115,8 +121,8 @@
                         for random state scrambles and images of scrambles. It also includes a timer and 
                         indexedDB to store user data. The app is hosted on Vercel and is open source on GitHub.
                     </div>
-                    <div class="d-flex justify-content-center flex" style="width: fit-content">
-                        <img src="./images/bettercube.jpeg" class="img-fluid" alt="Screenshots of  Better Cube" style="width: 100%;">
+                    <div class="d-flex justify-content-center" style="width: 100%;">
+                        <img src="./images/bettercube.jpeg" class="img-fluid" alt="Screenshots of Better Cube" style="max-width: 100%;">
                     </div>
                 </div>
             </div>
@@ -136,10 +142,10 @@
                         for the back end and Websockets for real-time updates on a user's
                         Whirlpool appliance screen.
                     </div>
-                    <div class="d-flex justify-content-center flex" style="width: fit-content">
-                        <img src="./images/gps1.png" class="img-fluid  alt="Screenshots of the Cooking GPS" style="width: 33%;">
-                        <img src="./images/gps2.png" class="img-fluid  alt="Screenshots of the Cooking GPS" style="width: 33%;">
-                        <img src="./images/gps3.png" class="img-fluid  alt="Screenshots of the Cooking GPS" style="width: 33%;">
+                    <div class="d-flex justify-content-center flex-wrap gap-2" style="width: 100%;">
+                        <img src="./images/gps1.png" class="img-fluid" alt="Screenshots of the Cooking GPS" style="width: 30%; min-width: 150px;">
+                        <img src="./images/gps2.png" class="img-fluid" alt="Screenshots of the Cooking GPS" style="width: 30%; min-width: 150px;">
+                        <img src="./images/gps3.png" class="img-fluid" alt="Screenshots of the Cooking GPS" style="width: 30%; min-width: 150px;">
                     </div>
                 </div>
             </div>
@@ -165,20 +171,23 @@
         <section class="section-container my-5" id="contact-section">
             <div class="section-title h2 text-center text-light">Contact</div>
             <div class="section-content text-light">
-                <form action="https://formspree.io/f/xovqzknp" method="post">
+                <p class="text-center mb-4">Let's connect! Feel free to reach out for collaboration opportunities or just to say hello.</p>
+                <form action="https://formspree.io/f/xovqzknp" method="post" class="contact-form">
                     <div class="form-group">
-                        <label for="sender">Name/Business:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+                        <label for="name">Name/Business:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your name or company" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     </div>
                     <div class="form-group">
                         <label for="message">Message:</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
                 </form>
             </div>
         </section>

@@ -1,0 +1,159 @@
+/* Responsive utilities and mobile-specific improvements */
+
+/* Mobile image grid for project screenshots */
+@media (max-width: 768px) {
+    .d-flex.flex-wrap {
+        flex-direction: column !important;
+    }
+    
+    .d-flex.flex-wrap img {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+    
+    /* Better spacing for mobile */
+    .gap-2 > * + * {
+        margin-left: 0 !important;
+        margin-top: 10px;
+    }
+}
+
+/* Smooth scrolling for all browsers */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Improved focus states for accessibility */
+.nav-link:focus,
+.btn-primary:focus,
+.form-control:focus {
+    outline: 2px solid var(--kelly_green);
+    outline-offset: 2px;
+}
+
+/* Better mobile navbar collapse */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.95);
+        border-radius: 8px;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid var(--green);
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.8rem 1rem;
+        border-radius: 6px;
+    }
+}
+
+/* Touch-friendly button sizes */
+@media (max-width: 768px) {
+    .btn-primary {
+        padding: 15px 35px;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    
+    .form-control {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --green: #00ff00;
+        --kelly_green: #00cc00;
+        --mint_green: #00ffff;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Contact form specific styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.form-control::placeholder {
+    font-style: italic;
+}
+
+/* Success message styling (for future enhancement) */
+.form-success {
+    background: rgba(0, 138, 8, 0.1);
+    border: 2px solid var(--kelly_green);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    color: var(--kelly_green);
+    margin-top: 1rem;
+}
+
+/* Error message styling (for future enhancement) */
+.form-error {
+    background: rgba(220, 53, 69, 0.1);
+    border: 2px solid #dc3545;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    color: #dc3545;
+    margin-top: 1rem;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .section-container {
+        background: white !important;
+        box-shadow: none !important;
+        border: 1px solid black !important;
+    }
+    
+    .nav-bar {
+        display: none !important;
+    }
+}
