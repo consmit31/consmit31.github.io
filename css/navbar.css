@@ -1,3 +1,17 @@
+/* CSS Variables with fallbacks for GitHub Pages compatibility */
+:root {
+    --green: rgb(24, 69, 59);
+    --kelly_green: rgb(0, 138, 8);
+    --dark_green: rgb(10, 29, 25);
+    --light_green: rgba(24, 69, 59, 0.1);
+    --mint_green: #40e0d0;
+    --text_light: #f8f9fa;
+    --text_muted: rgba(248, 249, 250, 0.8);
+    --shadow_dark: rgba(0, 0, 0, 0.3);
+    --border_radius: 12px;
+    --transition: all 0.3s ease;
+}
+
 /* Navbar container */
 #nav-bar {
     background: rgba(0, 0, 0, 0.9) !important;
@@ -32,29 +46,36 @@
 }
 
 .name {
-    color: var(--text_light) !important;
+    color: #f8f9fa !important;
+    color: var(--text_light, #f8f9fa) !important;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
     margin-left: 1rem;
-    background: linear-gradient(135deg, var(--kelly_green), var(--mint_green));
+    background: linear-gradient(135deg, #008a08, #40e0d0);
+    background: linear-gradient(135deg, var(--kelly_green, #008a08), var(--mint_green, #40e0d0));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    transition: var(--transition, all 0.3s ease);
 }
 
 /* Navigation links */
 .nav-link {
-    color: var(--text_light) !important;
+    color: #f8f9fa !important;
+    color: var(--text_light, #f8f9fa) !important;
     font-weight: 500;
+    font-size: 1.25rem !important;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    transition: var(--transition, all 0.3s ease);
     cursor: pointer;
 }
 
 .nav-link:hover {
-    color: var(--mint_green) !important;
+    color: #40e0d0 !important;
+    color: var(--mint_green, #40e0d0) !important;
     background: rgba(64, 224, 208, 0.1);
     transform: translateY(-1px);
 }
@@ -72,7 +93,8 @@
 
 #linkedin-image:hover,
 #github-image:hover {
-    background: var(--light_green);
+    background: rgba(24, 69, 59, 0.1);
+    background: var(--light_green, rgba(24, 69, 59, 0.1));
     transform: scale(1.15);
     filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(64, 224, 208, 0.6));
 }
@@ -86,9 +108,9 @@
 
 /* Mobile hamburger menu */
 .navbar-toggler {
-    border: 2px solid var(--kelly_green);
+    border: 2px solid #008a08;
+    border: 2px solid var(--kelly_green, #008a08);
     padding: 0.5rem;
-    
 }
 
 .navbar-toggler-icon {
